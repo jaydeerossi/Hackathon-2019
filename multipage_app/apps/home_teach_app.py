@@ -46,15 +46,23 @@ layout = html.Div(
     ),
     html.Div(
         html.Center(
+            children=[
+            html.Img(
+            src='https://i.imgur.com/vBjolrr.png',
+            style={
+                'height' : '35%',
+                'width' : '35%',
+                'float' : 'center',
+                'position' : 'relative',
+                'padding-top' : 0,
+                'padding-right' : 0
+            }),
         dcc.Markdown('''
 ## Breaking Open the Black Box
 At the 2019 Mount Sinai Health Hackathon we set about to making AI more accesible to those working in a healthcare setting
 This website provides access to explanations of AI tools used in the health care setting today as well as the concepts behind these tools
-
-
-### Quickstart: select whether you want to explore existng AI tools in medicine or explanations of AI topics
-    '''),
-            style={'padding': 100} ),
+    ''')
+             ], style={'padding-bottom': 00})
     ),
     html.Div(
         children=[
@@ -68,7 +76,23 @@ This website provides access to explanations of AI tools used in the health care
                         '''),
             style={'padding': 100}
         )],style={
-        'backgroundColor':'#f1f0ea',
+        'backgroundColor':'#99ccff',
+        'border': 'grey',
+        'padding': '50px 10px 50px'}
+    ),
+    html.Div(
+        children=[
+            html.Center(
+            dcc.Markdown('''
+                ### How should you use this website?
+            '''),style={'padding-top': 50}),
+            html.Center(
+            dcc.Markdown('''
+                ##### Start with what interests or drives you: Is it existing AI tools and how they aid in medical decision-making? Or do you want to understand the statistical concepts underpinning AI? Go at your own pace - spend 5 seconds getting the quick info, or spend 5 hours diving deeper and deeper. Learn how you want, for as long as you want.
+                        '''),
+            style={'padding': 100}
+        )],style={
+        'backgroundColor':'#98e698',
         'border': 'grey',
         'padding': '50px 10px 50px'}
     ),
@@ -99,9 +123,7 @@ This website provides access to explanations of AI tools used in the health care
                         'padding-right' : 0,
                         'padding': 40,
                         'border-radius': '100px'
-            })], href='/apps/vid')]
-    #         # dcc.Link(html.Button('Existing AI healthcare tools'), href='/apps/tool', style={'padding': 100})
-    )
+            })], href='/apps/vid')], style={'padding': 100})
 
     ]
 )
