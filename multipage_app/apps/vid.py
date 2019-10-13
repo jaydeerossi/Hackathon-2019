@@ -80,7 +80,7 @@ search for the topic area you would like to know more about or browse available 
         dcc.Input(
             id='search_val',
             type='text',
-            value = ' ',
+            value = '',
             placeholder= 'Start typting to search',
             style={
                 'margin':30,
@@ -101,8 +101,9 @@ search for the topic area you would like to know more about or browse available 
 
 def search_option_update(search_val):
     length= len(search_val)
-    if search_val.lower() == 'sepsis'[:length-1]:
-        print('here')
+    if search_val == '':
+        return [video_list + filler_list]
+    if search_val.lower() == 'sepsis'[:length]:
         return video_list
     return [video_list + filler_list]
 
