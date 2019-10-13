@@ -22,25 +22,27 @@ layout = html.Div(
                 #inside div
                 html.Div(
                     children=[
-                        html.A(
-                            'Website Name',
-                            style={'margin':15, 'fontSize':30}
+                        html.Img(
+                            src='https://i.imgur.com/Qp1SMwQ.png',
+                            style={
+                                'margin':10,
+                                'height': '80%',
+                                # 'width': '10%'
+                                   }
                         ),
                         #ul list components
                         html.Ul(
                             children=[
                                html.Li(html.A('Home', href='/')),
-                               html.Li(html.A('Search by Specialty', href='/apps/organ')),
                                html.Li(html.A('Tool Lookup', href='/apps/tool')),
                                html.Li(html.A('Tutorial Videos', href='/apps/vid')),
-                               html.Li(html.A('Data Sets', href='/apps/data')),
                             ],
                             id='nav-mobile',
                             className='right hide-off-med-and-down'
-                        ), 
+                        ),
                     ],
                     className='nav-wrapper'
-                ),style={'background-color':'#4c586f'}),
+                ),style={'background-color':'#66ccff'}),
         ],
         className='navbar-fixed'
     ),
@@ -57,47 +59,39 @@ layout = html.Div(
                 'padding-top' : 0,
                 'padding-right' : 0
             }),
-        dcc.Markdown('''
-## Breaking Open the Black Box
-At the 2019 Mount Sinai Health Hackathon we set about to making AI more accesible to those working in a healthcare setting
-This website provides access to explanations of AI tools used in the health care setting today as well as the concepts behind these tools
-    ''')
-             ], style={'padding-bottom': 00})
+                html.Center(
+        html.H1('''Breaking Open the Black Box
+    '''), style={'padding-bottom': 100})
+             ], style={'padding-bottom': 0})
     ),
     html.Div(
         children=[
             html.Center(
-            dcc.Markdown('''
-                ### What is this website?
-            '''),style={'padding-top': 50}),
+                html.H3('What is this website?'),style={'padding-top': 50,'text-shadow': '0.5px 0.5px gray'}),
             html.Center(
-            dcc.Markdown('''
-                ##### The healthcare field needs more tech-savvy professionals, like you, to understand and smartly leverage Artificial Intelligence (AI) technology.
-                        '''),
-            style={'padding': 100}
+            html.H5('The healthcare field needs more tech-savvy professionals, like you, to understand and smartly leverage Artificial Intelligence (AI) technology. At the 2019 Mount Sinai Health Hackathon we set about to make AI more accesible to those working in a healthcare setting. This website provides access to explanations of AI tools used in the health care setting today as well as the concepts behind these tools'),style={'padding': 100,'text-shadow': '0.5px 0.5px gray'}
         )],style={
-        'backgroundColor':'#99ccff',
+        'backgroundColor':'#80ffff',
         'border': 'grey',
-        'padding': '50px 10px 50px'}
+        'padding': '50px 10px 10px',
+        'box-shadow': '5px 5px 5px #888888'}
     ),
     html.Div(
         children=[
             html.Center(
-            dcc.Markdown('''
-                ### How should you use this website?
-            '''),style={'padding-top': 50}),
+            html.H3('How should you use this website?'),style={'padding-top': 50,'color':'#ffffff','text-shadow': '0.5px 0.5px black'}),
             html.Center(
-            dcc.Markdown('''
-                ##### Start with what interests or drives you: Is it existing AI tools and how they aid in medical decision-making? Or do you want to understand the statistical concepts underpinning AI? Go at your own pace - spend 5 seconds getting the quick info, or spend 5 hours diving deeper and deeper. Learn how you want, for as long as you want.
-                        '''),
-            style={'padding': 100}
+            html.H5('Start with what interests or drives you: Is it existing AI tools and how they aid in medical decision-making? Or do you want to understand the statistical concepts underpinning AI? Go at your own pace - spend 5 seconds getting the quick info, or spend 5 hours diving deeper and deeper. Learn how you want, for as long as you want.'),
+            style={'padding': 100,'color':'#ffffff','text-shadow': '0.5px 0.5px black'}
         )],style={
-        'backgroundColor':'#98e698',
+        'backgroundColor':'#71da71',
         'border': 'grey',
-        'padding': '50px 10px 50px'}
+        'padding': '50px 10px 50px',
+        'box-shadow': '5px 5px 5px #888888'}
     ),
     html.Center(
         children=[
+        html.H3('Choose where you want to start:'),
         html.A([
             html.Img(
                     src='https://i.imgur.com/BV0MYj2.png',
